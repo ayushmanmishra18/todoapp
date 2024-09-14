@@ -1,0 +1,233 @@
+/* styles.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+/* Container for positioning */
+.div1 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(149deg, #006aff, rgb(215, 57, 128));
+    display: flex; /* Flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Make the container relative for absolute positioning inside */
+}
+
+/* To-Do section */
+.todo {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Header in To-Do section */
+.todo h2 {
+    color: #002765;
+    display: flex; /* Flexbox to align image and text */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* To-Do section image */
+.todo img {
+    width: 50px;
+    height: auto;
+}
+
+/* Input box styling */
+#inputbox {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border: 2px solid #006aff;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#inputbox::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+#inputbox:focus {
+    background-color: #e0f0ff;
+    border-color: #215ca3;
+    box-shadow: 0 0 8px rgba(0, 106, 255, 0.3);
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #006aff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #004bbd;
+}
+
+/* List styling */
+#list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+#list li:hover {
+    background-color: #e0f0ff;
+    transform: translateY(-3px);
+}
+
+#list li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+#list li.checked::before {
+    background-image: url(images/unchecked.png);
+}
+
+#list input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+#list label {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+#list li span {
+    background-color: #ff414d;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#list li span:hover {
+    background-color: #ff7f81;
+}
+
+/* About link styling */
+.about-link {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    font-size: 18px; /* Font size */
+}
+
+.about-link a {
+    background-color: #006aff; /* Background color */
+    padding: 10px 20px; /* Padding */
+    color: #fff; /* Text color */
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Hover effect */
+}
+
+.about-link a:hover {
+    background-color: #004bbd; /* Darker blue on hover */
+}
+
+/* Styles for About page */
+.about-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(149deg, #006aff, rgb(215, 57, 128)); /* Same background as main page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Extra styling */
+}
+
+.about-content h2 {
+    color: #002765;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.credits {
+    font-size: 16px;
+    color: #555;
+    margin-top: 30px;
+}
+
+.credits a {
+    color: #006aff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.credits a:hover {
+    color: #004bbd;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #006aff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #004bbd; /* Darker blue on hover */
+}
