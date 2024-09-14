@@ -3,7 +3,7 @@ const list = document.getElementById("list");
 
 function addtask() {
     if (inputbox.value === '') {
-        alert("You must write something baby!");
+        alert("You must write something !");
     } else {
         let li = document.createElement("li");
         let checkbox = document.createElement("input");
