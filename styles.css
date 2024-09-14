@@ -158,7 +158,7 @@ button:hover {
 }
 
 .about-link a {
-    background-color: #006aff; /* Background color */
+    background-color: rgb(215, 57, 128); /* Background color */
     padding: 10px 20px; /* Padding */
     color: #fff; /* Text color */
     border-radius: 8px; /* Rounded corners */
